@@ -20,7 +20,7 @@ const routes: Routes = [
     path: 'movie-details/:imdbID', component: MovieDetailsComponent
   },
   {
-    path: '**', redirectTo: ''
+    path: '**', redirectTo: '/home'
   }
 ];
 

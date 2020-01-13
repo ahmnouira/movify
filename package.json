@@ -1,6 +1,7 @@
 {
   "name": "movify",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Develop a real world Movie Finder app and deploy it to Netlify",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +10,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "author": {
+    "name": "Ahmed Nouira",
+    "email": "ahmnouira@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmnouira/movify"
+  },
+  "readme": "https://github.com/ahmnouira/movify#readme",
+  "license": "MIT",
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
