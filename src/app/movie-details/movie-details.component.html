@@ -1,0 +1,88 @@
+<!-- <p>{{movie | async | json }}</p> -->
+<div class="container-fluid mt-4">
+
+    <div class="text-center" *ngIf="!(movie | async)">
+        <img src="assets/images/loading.gif" class="img" width="320" height="320" alt="loading...">
+    </div>
+
+    <div class="row" *ngIf="movie | async as movie">
+        <div class="col-md-3">
+            <img [src]="movie.Poster" style="width: 100%" [alt]="movie.Title" title="{{movie.Title}}"
+                class="img img-thumbnail">
+        </div>
+
+        <div class="col-md-6">
+            <h1>{{movie.Title}}</h1>
+            <table class="table table-stripped table-hover">
+
+                <tbody>
+                    <tr>
+                        <td>Year:</td>
+                        <td>{{movie.Year}}</td>
+                    </tr>
+                    <tr>
+                        <td>Released:</td>
+                        <td>{{movie.Released}}</td>
+                    </tr>
+                    <tr>
+                        <td>Runtime:</td>
+                        <td>{{movie.Runtime}}</td>
+                    </tr>
+                    <tr>
+                        <td>Genre:</td>
+                        <td>{{movie.Genre}}</td>
+                    </tr>
+                    <tr>
+                        <td>Director:</td>
+                        <td>{{movie.Director}}</td>
+                    </tr>
+                    <tr>
+                        <td>Writer:</td>
+                        <td>{{movie.Writer}}</td>
+                    </tr>
+                    <tr>
+                        <td>Actors:</td>
+                        <td>{{movie.Actors}}</td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>{{movie.Country}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button (click)="goBack()" class="btn btn-primary">Back</button>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <div class="card-body text-light">
+                    <h4 class="card-title text-center">Stats</h4>
+                    <div class="card-text">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>BoxOffice:</td>
+                                    <td>{{movie.BoxOffice}}</td>
+                                </tr>
+                                <tr>
+                                    <td>imdbVotes:</td>
+                                    <td>{{movie.imdbVotes}}</td>
+                                </tr>
+                                <tr>
+                                    <td>imdbRating:</td>
+                                    <td>{{movie.imdbRating}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Metascore:</td>
+                                    <td>{{movie.Metascore}}</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
