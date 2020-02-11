@@ -1,7 +1,7 @@
 <!-- <p>{{movie | async | json }}</p> -->
 <div class="container-fluid mt-4">
 
-    <div class="text-center" *ngIf="!(movie | async)">
+    <div class="text-center" *ngIf="(movie | async) === false">
         <img src="assets/images/loading.gif" class="img" width="320" height="320" alt="loading...">
     </div>
 

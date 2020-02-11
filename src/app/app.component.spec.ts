@@ -1,15 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ListMoviesComponent } from './components/list-movies/list-movies.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule, HttpClientTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, HomeComponent, HeaderComponent, ListMoviesComponent, MovieDetailsComponent
       ],
     }).compileComponents();
   }));

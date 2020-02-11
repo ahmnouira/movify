@@ -16,8 +16,8 @@ export class ListMoviesComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(parmas => {
-    this.moviesService.getMovies(parmas['q']).subscribe(data => {
-      this.movies = data['Search'];
+    this.moviesService.getMovies(parmas.q).subscribe(data => {
+      this.movies = data.Search;
       console.log(this.movies);
     });
   });
